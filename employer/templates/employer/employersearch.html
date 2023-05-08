@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% block content %}
+    <div class="col-12 mt-5">
+        {% if results != None %}
+        <table class="table table-hover text-center">
+            <thead>
+              <tr>
+                <th scope="col">Employer Id</th>
+                <th scope="col">job_title</th>
+                <th scope="col">job_description</th>
+                <th scope="col">company_name</th>
+                <th scope="col">experience</th>
+                <th scope="col">qualification</th>
+                <th scope="col">no_of_opening</th>
+                <th scope="col">job_location </th>
+                <th scope="col">salary_range</th>
+                <th scope="col">skills</th>
+                <th scope="col">contact_person_name</th>
+                <th scope="col">contact_person_profile</th>
+                <th scope="col">mobile</th>
+                <th scope="col">email</th>
+                <th scope="col">model_of_job</th>
+                <th scope="col"> company_address<th>
+                <th scope="col">job_type</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              {% for emp in results %}
+              <tr>
+                <th scope="row">{{emp.id}}</th>
+                <td>{{emp.job_title}}</td>
+                <td>{{emp.job_description}}</td>
+                <td>{{emp.company_name}}</td>
+                <td>{{emp.experience}}</td>
+                <td>{{emp.no_of_opening}}</td>
+                <td>{{emp.job_location}}</td>
+                <td>{{emp.salary_range}}</td>
+                <td>{{emp.skills}}</td>
+                <td>{{emp.contact_person_name}}</td>
+                <td>{{emp.contact_person_profile}}</td>
+                <td>{{emp.mobile}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.model_of_job}}</td>
+                <td>{{emp.company_addres}}</td>
+                <td>{{emp.job_type}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% else %}
+          <h3 class="text-info">No Employer data are available...</h3>
+        {% endif %}
+    </div>
+{% endblock content %}

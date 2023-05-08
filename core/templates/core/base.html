@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindware</title>
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    {% block style %}<link rel="stylesheet" href="{% static 'core/css/style.css' %}">{% endblock style %}
+</head>
+<body>
+    <div class="container-fluid">
+        {% include 'core/navbar.html' %}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% block msg %}
+                {% endblock msg %}
+            </div>
+        </div>
+        <div class="row">
+            {% block side %}
+            {% endblock side %}
+
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+    <div class="container-fluid mt-5">
+        {% include 'core/footer.html' %}
+    </div>
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/popper.js' %}"></script>
+    <script src="{% static 'core/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.js' %}"></script> 
+</body>
+</html>

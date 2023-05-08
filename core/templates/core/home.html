@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="col-sm-12 mt-5">  
+        <marquee behavior="alternate" direction="">
+            <h3>India’s Largest Job Portal Mindware helps you hire staff within minutes</h3>
+        </marquee>
+        <div class="my-5 text-center">
+            <img src="{% static 'core/images/home.png'%}" alt="image not found"  class="w-100">
+        </div>
+        <div class="text-center px-5">
+            <button class="btn btn-outline-secondary"><a class="nav-item nav-link" href="">Hire Now</a></button>
+            <button class="btn btn-outline-secondary"><a class="nav-item nav-link" href="">Get a Job</a></button>
+        </div>
+    </div>
+{% endblock content %}
